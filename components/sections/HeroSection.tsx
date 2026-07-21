@@ -10,7 +10,7 @@ export const HeroSection: React.FC = () => {
   return (
     <section className="relative pt-32 pb-20 overflow-hidden bg-radial-gradient">
       {/* Background Cyber Grid */}
-      <div className="absolute inset-0 bg-cyber-grid opacity-30 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-cyber-grid opacity-60 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -18,23 +18,23 @@ export const HeroSection: React.FC = () => {
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2">
               <Badge variant="emerald">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
                 Backend & AI Software Engineer
               </Badge>
-              <Badge variant="cyan">Future Startup Founder</Badge>
+              <Badge variant="cyan">Distributed Systems & AI</Badge>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-stone-900 tracking-tight leading-[1.1]">
               Architecting High-Scale <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-indigo-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 via-orange-700 to-stone-900">
                 Backend Systems & AI Infrastructure
               </span>
             </h1>
 
-            <p className="text-lg text-slate-300 max-w-2xl leading-relaxed">
-              Software Engineer at <span className="text-white font-medium">OFB Tech (OfBusiness)</span> building SaaS products for 
-              <span className="text-emerald-400 font-mono"> 5,000+ enterprise clients</span> across 
-              <span className="text-cyan-400 font-mono"> 50+ countries</span>. Specializing in autonomous AI agent orchestration, vector RAG pipelines, and sub-second Elasticsearch systems.
+            <p className="text-lg text-stone-700 max-w-2xl leading-relaxed">
+              Software Engineer at <span className="text-stone-900 font-semibold">OFB Tech (OfBusiness)</span> building SaaS products for 
+              <span className="text-amber-800 font-mono font-semibold"> 5,000+ enterprise clients</span> across 
+              <span className="text-amber-900 font-mono font-semibold"> 50+ countries</span>. Specializing in autonomous AI agent orchestration, vector RAG pipelines, and sub-second Elasticsearch search systems.
             </p>
 
             {/* CTAs */}
@@ -67,15 +67,15 @@ export const HeroSection: React.FC = () => {
             </div>
 
             {/* Key Metrics Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-slate-800/80">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-stone-300/80">
               {HERO_METRICS.map((metric) => (
                 <div key={metric.label} className="space-y-1">
-                  <div className="text-2xl font-bold font-mono text-white tracking-tight">
+                  <div className="text-2xl font-bold font-mono text-stone-900 tracking-tight">
                     {metric.value}
                   </div>
-                  <div className="text-xs text-slate-400 font-sans">{metric.label}</div>
+                  <div className="text-xs text-stone-600 font-sans">{metric.label}</div>
                   {metric.subtext && (
-                    <div className="text-[10px] text-emerald-400/90 font-mono">{metric.subtext}</div>
+                    <div className="text-[10px] text-amber-800 font-mono font-medium">{metric.subtext}</div>
                   )}
                 </div>
               ))}

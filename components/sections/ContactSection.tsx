@@ -16,21 +16,21 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#0b0f17] relative border-t border-slate-800/80">
+    <section id="contact" className="py-24 bg-[#FAF8F5] relative border-t border-stone-300/80">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Card className="text-center p-8 sm:p-12 space-y-8 bg-gradient-to-b from-[#121824] to-[#0d121c] border-emerald-500/30">
+        <Card className="text-center p-8 sm:p-12 space-y-8 bg-white border-stone-300 shadow-md shadow-stone-200/50">
           <div className="space-y-4 max-w-2xl mx-auto">
             <Badge variant="emerald" className="mx-auto">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              Open for High-Impact Roles & Ventures
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+              Open for High-Impact Roles
             </Badge>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight">
               Let&apos;s Build Something Scalable
             </h2>
 
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Whether you are a recruiter looking for a heavy-hitter backend & AI engineer, a founder seeking a technical co-founder, or an investor discussing next-gen AI platforms—I&apos;d love to connect.
+            <p className="text-stone-700 text-sm sm:text-base leading-relaxed">
+              Whether you are looking for a high-impact backend & AI engineer, scaling distributed microservices, or building autonomous AI infrastructure—I&apos;d love to connect.
             </p>
           </div>
 
@@ -42,11 +42,11 @@ export const ContactSection: React.FC = () => {
               onClick={handleCopyEmail}
               icon={
                 copied ? (
-                  <svg className="w-5 h-5 text-slate-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 ) : (
-                  <svg className="w-5 h-5 text-slate-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-stone-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 002-2h2a2 2 0 002 2m0 0h2a2 2 0 002 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
                   </svg>
                 )
@@ -63,22 +63,22 @@ export const ContactSection: React.FC = () => {
           </div>
 
           {/* Direct Channels */}
-          <div className="pt-8 border-t border-slate-800/80 flex flex-wrap items-center justify-center gap-8 font-mono text-xs text-slate-400">
+          <div className="pt-8 border-t border-stone-200 flex flex-wrap items-center justify-center gap-8 font-mono text-xs text-stone-600">
             <div>
-              <span className="text-slate-500">Email:</span>{' '}
-              <a href={`mailto:${PERSONAL_INFO.email}`} className="text-cyan-400 hover:underline">
+              <span className="text-stone-400">Email:</span>{' '}
+              <a href={`mailto:${PERSONAL_INFO.email}`} className="text-amber-900 font-semibold hover:underline">
                 {PERSONAL_INFO.email}
               </a>
             </div>
             <div>
-              <span className="text-slate-500">GitHub:</span>{' '}
-              <a href={PERSONAL_INFO.github} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
+              <span className="text-stone-400">GitHub:</span>{' '}
+              <a href={PERSONAL_INFO.github} target="_blank" rel="noopener noreferrer" className="text-amber-900 font-semibold hover:underline">
                 github.com/Devanshbhadauria
               </a>
             </div>
             <div>
-              <span className="text-slate-500">LinkedIn:</span>{' '}
-              <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
+              <span className="text-stone-400">LinkedIn:</span>{' '}
+              <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-amber-900 font-semibold hover:underline">
                 linkedin.com/in/devansh-bhadauria
               </a>
             </div>
