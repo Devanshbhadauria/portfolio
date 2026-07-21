@@ -17,7 +17,7 @@ export default function Home() {
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0b0f17]">
+    <div className="min-h-screen flex flex-col bg-[#FAF8F5]">
       {/* Navbar */}
       <Navbar onOpenTerminal={() => setIsTerminalOpen(true)} />
 

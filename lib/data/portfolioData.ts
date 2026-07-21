@@ -5,13 +5,13 @@ export const PERSONAL_INFO = {
   title: 'Backend & AI Engineer | Systems Builder',
   tagline: 'Architecting High-Scale Distributed Systems & Autonomous AI Infrastructure',
   status: 'ONLINE',
-  statusText: 'Building @ OFB Tech | Exploring Founding Opportunities',
+  statusText: 'Building @ OFB Tech',
   email: 'devanshbhadauria22@gmail.com',
   phone: '+91-7817074386',
   github: 'https://github.com/Devanshbhadauria',
   linkedin: 'https://linkedin.com/in/devansh-bhadauria',
   location: 'Gurugram, India',
-  availability: 'Open for high-impact AI/Backend engineering & co-founder roles',
+  availability: 'Open for high-impact AI & Backend engineering roles',
 };
 
 export const HERO_METRICS: SystemMetric[] = [

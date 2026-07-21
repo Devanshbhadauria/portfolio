@@ -15,7 +15,7 @@ export const TerminalWidget: React.FC = () => {
     {
       id: 'welcome-1',
       type: 'system',
-      content: 'DevanshOS v1.0.4 (x86_64-apple-darwin26.0)',
+      content: 'DevanshOS Shell (darwin-arm64)',
     },
     {
       id: 'welcome-2',
@@ -222,20 +222,20 @@ export const TerminalWidget: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-[#0a0d14] border border-slate-800/90 rounded-xl overflow-hidden shadow-2xl font-mono text-xs">
+    <div className="w-full bg-[#1c1917] border border-stone-800 rounded-xl overflow-hidden shadow-xl shadow-stone-400/20 font-mono text-xs">
       {/* Top Console Bar */}
-      <div className="bg-slate-900/90 px-4 py-2.5 border-b border-slate-800 flex items-center justify-between">
+      <div className="bg-stone-900 px-4 py-2.5 border-b border-stone-800 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 rounded-full bg-rose-500/80"></div>
           <div className="w-3 h-3 rounded-full bg-amber-500/80"></div>
           <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
-          <span className="ml-2 text-slate-400 text-[11px]">devansh@portfolio:~ (bash)</span>
+          <span className="ml-2 text-stone-400 text-[11px]">devansh@portfolio:~ (bash)</span>
         </div>
 
         <div className="flex items-center gap-2">
           <button
             onClick={() => handleCommand('clear')}
-            className="text-[10px] text-slate-400 hover:text-slate-200 px-2 py-0.5 rounded bg-slate-800 border border-slate-700 cursor-pointer"
+            className="text-[10px] text-stone-400 hover:text-stone-200 px-2 py-0.5 rounded bg-stone-800 border border-stone-700 cursor-pointer"
           >
             Clear
           </button>
@@ -243,7 +243,7 @@ export const TerminalWidget: React.FC = () => {
       </div>
 
       {/* Output Console Window */}
-      <div className="p-4 h-80 overflow-y-auto space-y-3 bg-[#080b11]">
+      <div className="p-4 h-80 overflow-y-auto space-y-3 bg-[#151210]">
         {history.map((line) => (
           <div key={line.id}>
             {line.type === 'input' && (

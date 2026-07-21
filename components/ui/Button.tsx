@@ -15,7 +15,7 @@ export const Button: React.FC<ButtonProps> = ({
   className = '',
   ...props
 }) => {
-  const baseStyles = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed';
+  const baseStyles = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500/50 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed';
 
   const sizeStyles = {
     sm: 'px-3 py-1.5 text-xs font-mono gap-1.5',
@@ -24,11 +24,11 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   const variantStyles = {
-    primary: 'bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 active:scale-[0.98]',
-    secondary: 'bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-700/80 hover:border-slate-600',
-    outline: 'bg-transparent hover:bg-slate-800/60 text-slate-200 border border-slate-700 hover:border-slate-500',
-    ghost: 'bg-transparent hover:bg-slate-800/40 text-slate-300 hover:text-white',
-    terminal: 'bg-slate-900 hover:bg-slate-850 text-emerald-400 border border-emerald-500/30 hover:border-emerald-500/60 font-mono shadow-inner',
+    primary: 'bg-stone-900 hover:bg-stone-800 text-stone-50 font-semibold shadow-md hover:shadow-lg active:scale-[0.98]',
+    secondary: 'bg-stone-200/80 hover:bg-stone-300/80 text-stone-900 border border-stone-300/80',
+    outline: 'bg-white hover:bg-stone-100/80 text-stone-800 border border-stone-300 shadow-sm',
+    ghost: 'bg-transparent hover:bg-stone-200/50 text-stone-700 hover:text-stone-900',
+    terminal: 'bg-stone-900 hover:bg-stone-800 text-emerald-400 border border-stone-700 font-mono shadow-inner',
   };
 
   return (

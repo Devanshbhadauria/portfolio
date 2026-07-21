@@ -31,21 +31,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#0b0f17]/90 backdrop-blur-md border-b border-slate-800/80 py-3 shadow-xl shadow-black/20'
+          ? 'bg-[#FAF8F5]/90 backdrop-blur-md border-b border-stone-200/90 py-3 shadow-sm'
           : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-center font-mono font-bold text-emerald-400 group-hover:border-emerald-500/50 group-hover:shadow-lg group-hover:shadow-emerald-500/20 transition-all">
+          <div className="w-9 h-9 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center font-mono font-bold text-amber-400 group-hover:bg-stone-800 transition-all shadow-sm">
             DSB
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-slate-100 text-sm tracking-wide group-hover:text-emerald-400 transition-colors">
+            <span className="font-bold text-stone-900 text-sm tracking-wide group-hover:text-amber-800 transition-colors">
               Devansh S. Bhadauria
             </span>
-            <span className="text-[10px] font-mono text-slate-400">Backend & AI Engineer</span>
+            <span className="text-[10px] font-mono text-stone-500">Backend & AI Engineer</span>
           </div>
         </a>
 
@@ -55,7 +55,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
             <a
               key={link.name}
               href={link.href}
-              className="text-xs font-mono text-slate-300 hover:text-emerald-400 transition-colors"
+              className="text-xs font-mono text-stone-600 hover:text-stone-900 transition-colors"
             >
               {link.name}
             </a>
@@ -64,10 +64,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
 
         {/* Status Pill & Terminal Trigger */}
         <div className="flex items-center gap-3">
-          <div className="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-800 text-[11px] font-mono text-slate-300">
+          <div className="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-stone-200 text-[11px] font-mono text-stone-700 shadow-sm shrink-0">
             <span className="relative flex h-2 w-2">
-              <span className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              <span className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
             </span>
             <span>{PERSONAL_INFO.statusText}</span>
           </div>
