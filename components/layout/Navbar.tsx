@@ -43,7 +43,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
           </div>
           <div className="flex flex-col">
             <span className="font-bold text-stone-900 text-sm tracking-wide group-hover:text-amber-800 transition-colors">
-              Devansh S. Bhadauria
+              Devansh Singh Bhadauria
             </span>
             <span className="text-[10px] font-mono text-stone-500">Backend & AI Engineer</span>
           </div>
