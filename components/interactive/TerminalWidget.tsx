@@ -24,10 +24,12 @@ export const TerminalWidget: React.FC = () => {
     },
   ]);
 
-  const bottomRef = useRef<HTMLDivElement>(null);
+  const consoleBoxRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (consoleBoxRef.current) {
+      consoleBoxRef.current.scrollTop = consoleBoxRef.current.scrollHeight;
+    }
   };
 
   useEffect(() => {
@@ -243,7 +245,7 @@ export const TerminalWidget: React.FC = () => {
       </div>
 
       {/* Output Console Window */}
-      <div className="p-4 h-80 overflow-y-auto space-y-3 bg-[#151210]">
+      <div ref={consoleBoxRef} className="p-4 h-80 overflow-y-auto space-y-3 bg-[#151210]">
         {history.map((line) => (
           <div key={line.id}>
             {line.type === 'input' && (
@@ -260,7 +262,6 @@ export const TerminalWidget: React.FC = () => {
             )}
           </div>
         ))}
-        <div ref={bottomRef} />
       </div>
 
       {/* Quick Action Chips */}
