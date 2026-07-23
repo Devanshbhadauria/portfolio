@@ -20,10 +20,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
   }, []);
 
   const navLinks = [
-    { name: 'AI Capabilities', href: '#ai-engine' },
-    { name: 'Architecture & Projects', href: '#projects' },
+    { name: 'Experience & Systems', href: '#experience' },
     { name: 'Tech Stack', href: '#stack' },
-    { name: 'Experience', href: '#experience' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -35,7 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
         <a href="#" className="flex items-center gap-3 group">
           <div className="w-9 h-9 rounded-lg bg-stone-900 border border-stone-800 flex items-center justify-center font-mono font-bold text-amber-400 group-hover:bg-stone-800 transition-all shadow-sm">
@@ -50,21 +48,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
         </a>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-xs font-mono text-stone-600 hover:text-stone-900 transition-colors"
+              className="text-xs font-mono font-medium text-stone-600 hover:text-stone-900 transition-colors"
             >
               {link.name}
             </a>
           ))}
         </nav>
 
-        {/* Status Pill & Terminal Trigger */}
+        {/* Status Pill & Action */}
         <div className="flex items-center gap-3">
-          <div className="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-stone-200 text-[11px] font-mono text-stone-700 shadow-sm shrink-0">
+          <div className="hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-stone-200 text-[11px] font-mono text-stone-700 shadow-sm shrink-0">
             <span className="relative flex h-2 w-2">
               <span className="animate-pulse-ring absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
@@ -72,20 +70,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal }) => {
             <span>{PERSONAL_INFO.statusText}</span>
           </div>
 
-          {onOpenTerminal && (
-            <Button
-              variant="terminal"
-              size="sm"
-              onClick={onOpenTerminal}
-              icon={
-                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              }
-            >
-              DevanshOS CLI
+          <a href={`mailto:${PERSONAL_INFO.email}`}>
+            <Button variant="primary" size="sm">
+              Get in Touch
             </Button>
-          )}
+          </a>
         </div>
       </div>
     </header>

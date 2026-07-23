@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/Badge';
 export const StackSection: React.FC = () => {
   return (
     <section id="stack" className="py-24 bg-[#f5f2ec] relative border-t border-stone-300/60">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-16">
           <div className="flex items-center gap-2 mb-3">
